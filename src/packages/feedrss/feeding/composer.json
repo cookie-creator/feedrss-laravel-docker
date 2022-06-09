@@ -1,0 +1,26 @@
+{
+    "name": "feedrss/feeding",
+    "description": "",
+    "minimum-stability": "dev",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "me",
+            "email": "send@here.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "FeedrssFeeding\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FeedrssFeeding\\FeedrssFeedingServiceProvider"
+            ]
+        }
+    }
+}
