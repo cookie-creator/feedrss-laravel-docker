@@ -1,2 +1,2 @@
-# feedrss-laravel-docker-
+# feedrss-laravel-docker
 Put laravel into docker container
