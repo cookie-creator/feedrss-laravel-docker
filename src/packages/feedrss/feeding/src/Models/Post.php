@@ -2,6 +2,9 @@
 
 namespace FeedrssFeeding\Models;
 
+use App\Models\User;
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -34,5 +37,19 @@ class Post extends Model
     public function assignCategory($category)
     {
         $this->categories()->sync($category, false);
+    }
+
+    protected function date(): Attribute
+    {
+        return Attribute::make(
+            get: fn($value) => Carbon::createFromFormat('Y-m-d H:i:s', $this->created_at)->toFormattedDateString(),
+        );
+    }
+
+    protected function imageUrl(): Attribute
+    {
+        return Attribute::make(
+            get: fn($value) => config('app.url') . 'storage/files/' . $this->image->name,
+        );
     }
 }
