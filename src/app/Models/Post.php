@@ -1,8 +1,7 @@
 <?php
 
-namespace FeedrssFeeding\Models;
+namespace App\Models;
 
-use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

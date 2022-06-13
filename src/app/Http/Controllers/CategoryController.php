@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\PageService;
-use FeedrssFeeding\Models\Category;
-use FeedrssFeeding\Models\Post;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller

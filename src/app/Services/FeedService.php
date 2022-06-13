@@ -1,11 +1,11 @@
 <?php
 
-namespace FeedrssFeeding\Services;
+namespace App\Services;
 
-
-use FeedrssFeeding\Helpers\ImageUploadHelper;
-use FeedrssFeeding\Models\Post;
-use FeedrssFeeding\Repositories\FeedRepository;
+use App\Models\Post;
+use App\Repositories\FeedRepository;
+use App\Helpers\ImageUploadHelper;
+use FeedrssFeeding\FeedRSS;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 
@@ -18,6 +18,11 @@ class FeedService
     {
         $this->imageUploadHelper = $imageUploadHelper;
         $this->feedRepository = $feedRepository;
+    }
+
+    public function getPosts()
+    {
+        return FeedRSS::get();
     }
 
     public function storePosts(Collection $feedPosts)

@@ -1,6 +1,6 @@
 <?php
 
-namespace FeedrssFeeding\Helpers;
+namespace App\Helpers;
 
 use Illuminate\Support\Facades\Storage;
 

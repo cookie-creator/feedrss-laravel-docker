@@ -1,11 +1,11 @@
 <?php
 
-namespace FeedrssFeeding\Repositories;
+namespace App\Repositories;
 
 use App\Models\User;
-use FeedrssFeeding\Models\Category;
-use FeedrssFeeding\Models\Image;
-use FeedrssFeeding\Models\Post;
+use App\Models\Category;
+use App\Models\Image;
+use App\Models\Post;
 use FeedrssFeeding\Contracts\CategoryInterface;
 
 class FeedRepository

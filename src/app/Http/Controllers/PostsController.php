@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\PageService;
-use FeedrssFeeding\Models\Post;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
