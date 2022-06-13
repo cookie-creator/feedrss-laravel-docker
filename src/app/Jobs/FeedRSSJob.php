@@ -1,8 +1,8 @@
 <?php
 
-namespace FeedrssFeeding\Jobs;
+namespace App\Jobs;
 
-use FeedrssFeeding\FeedRSS;
+use App\Services\FeedService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -28,8 +28,10 @@ class FeedRSSJob implements ShouldQueue
      *
      * @return void
      */
-    public function handle()
+    public function handle(FeedService $service)
     {
-        FeedRSS::start();
+        $posts = $service->getPosts();
+
+        $service->storePosts($posts);
     }
 }
